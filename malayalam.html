@@ -43,7 +43,7 @@
       var reader = new M3U8FileParser();
       reader.read(allResponses[0]);
       reader.read(allResponses[1]);
-      // reader.read(allResponses[2]);
+      reader.read(allResponses[2]);
       const result = reader.getResult();
       if (result?.segments) {
         const sortedData = result?.segments.sort((a, b) => {
