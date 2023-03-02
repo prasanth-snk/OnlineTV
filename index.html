@@ -74,14 +74,6 @@
 </script>
 
 <script>
-  getPlayBackData().then(response => {
-    console.log('getPlayBackData', response);
-  }).catch(err => {
-    console.log('getPlayBackData err', err);
-  });
-</script>
-
-<script>
   function openList(key) {
     localStorage.setItem("list", document.getElementById(`${key}`).textContent);
     window.location.href = "./channellist.html";
