@@ -42,6 +42,7 @@
 <title>Online TV</title>
 <script src="https://prasanth-snk.github.io/onlinetv/m3u8-file-parser.min.js"></script>
 <script src="https://prasanth-snk.github.io/onlinetv/lang.min.js"></script>
+<script src="https://prasanth-snk.github.io/onlinetv/playback.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
   integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -71,6 +72,15 @@
 
   });
 </script>
+
+<script>
+  getPlayBackData().then(response => {
+    console.log('getPlayBackData', response);
+  }).catch(err => {
+    console.log('getPlayBackData err', err);
+  });
+</script>
+
 <script>
   function openList(key) {
     localStorage.setItem("list", document.getElementById(`${key}`).textContent);
